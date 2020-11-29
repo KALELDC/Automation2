@@ -16,10 +16,11 @@ public class AutomatizacionPaginaWeb {
 		chrome.get(sophos);
 		chrome.manage().window().maximize() ;
 		chrome.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS); 		
-		WebElement clicPP = chrome.findElement(By.xpath("/html/body"));
-		clicPP.click();
-		String originalWindow = chrome.getWindowHandle();
-		chrome.switchTo().window(originalWindow);
+		chrome.navigate().refresh();
+//		WebElement clicPP = chrome.findElement(By.xpath("/html/body"));
+//		clicPP.click();
+//		String originalWindow = chrome.getWindowHandle();
+//		chrome.switchTo().window(originalWindow);
 		WebElement clictrabaja = chrome.findElement(By.id("mega-menu-item-1541") );
 		clictrabaja.click();
 		
@@ -28,10 +29,6 @@ public class AutomatizacionPaginaWeb {
 		} catch (Exception e){}
 		
 		
-		chrome.close(); 
-		chrome.close(); 
-		
-		
-	}
-	
+		chrome.close(); 	
+	}	
 }
