@@ -7,6 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
 import org.openqa.selenium.support.ui.Select;
 
 public class PageObjectoTourFrancia extends PageFactory{
@@ -14,7 +15,7 @@ public class PageObjectoTourFrancia extends PageFactory{
 	
 	public PageObjectoTourFrancia (WebDriver webDriver) {
 		this.webDriver = webDriver;
-		PageFactory.initElements(webDriver, PageObjectoTourFrancia.class);
+		PageFactory.initElements( new AjaxElementLocatorFactory(webDriver, 10) , this);
 		
 	}
 	@FindBy (id="didomi-notice-agree-button")

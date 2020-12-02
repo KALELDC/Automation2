@@ -72,12 +72,36 @@ public class AutomatizacionPaginaWeb {
 	
 	
 	public void imprimircargo() {
-		System.out.println("A buscar merito");
-		WebElement cargodisponible = webDriver.findElement(By.xpath("/html/body/div[1]/div/main/div/div/div/article/div/div/div/div/section[2]/div/div/div/div/div/div[2]/div/div[1]/div[2]/div[1]"));
-		System.out.println("ya merito");
+		//Este busca el elemento por Xpath
+		
+		/*
+		//WebElement cargodisponible = webDriver.findElement(By.xpath("/html/body/div[1]/div/main/div/div/div/article/div/div/div/div/section[2]/div/div/div/div/div/div[2]/div/div[1]/div[2]/div[4]/div"));
+		//WebElement cargodisponible = webDriver.findElement(By.xpath("/html/body/div[1]/div/main/div/div/div/article/div/div/div/div/section[2]/div/div/div/div/div/div[2]/div/div[1]/div[2]/div[5]/div");
+		//WebElement cargodisponible = webDriver.findElement(By.xpath("/html/body/div[1]/div/main/div/div/div/article/div/div/div/div/section[2]/div/div/div/div/div/div[2]/div/div[1]/div[2]/div[6]/div");
+		//WebElement cargodisponible = webDriver.findElement(By.xpath("/html/body/div[1]/div/main/div/div/div/article/div/div/div/div/section[2]/div/div/div/div/div/div[2]/div/div[1]/div[2]/div[7]/div"));
+		//WebElement cargodisponible = webDriver.findElement(By.xpath("/html/body/div[1]/div/main/div/div/div/article/div/div/div/div/section[2]/div/div/div/div/div/div[2]/div/div[1]/div[2]/div[8]/div");
+		//WebElement cargodisponible = webDriver.findElement(By.xpath("/html/body/div[1]/div/main/div/div/div/article/div/div/div/div/section[2]/div/div/div/div/div/div[2]/div/div[1]/div[2]/div[9]/div");
+		WebElement cargodisponible1= webDriver.findElement(By.className("premium-blog-post-container"));
+		WebElement cargodisponible2= webDriver.findElement(By.className("premium-blog-post-container"));
+		
+		System.out.println(cargodisponible1.getText());
+		System.out.println(cargodisponible2.getText());
+
+		System.out.println("LO LOGREE 100%");
+		*/
+		//System.out.println(cargodisponible.getText());
+		int acumulador= 1;
+		for (acumulador=1; acumulador<=9; acumulador++) {
+			WebElement cargodisponible= webDriver.findElement(By.xpath("/html/body/div[1]/div/main/div/div/div/article/div/div/div/div/section[2]/div/div/div/div/div/div[2]/div/div[1]/div[2]/div["+ acumulador +"]/div"));
 			System.out.println(cargodisponible.getText());
-			System.out.println("ya casi");
-			webDriver.close(); 	
+		}
+			
+		
+		
+
+		
 	}
+	
+	
 	
 }
