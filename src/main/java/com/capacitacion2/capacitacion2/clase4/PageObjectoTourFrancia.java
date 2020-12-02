@@ -46,4 +46,13 @@ public class PageObjectoTourFrancia extends PageFactory{
 		}
 	}
 
+	public void imprimirCampeon() {
+		int acumulador= 1;
+		for (WebElement posicion : ListaCiclistas) {
+			if (acumulador==1){
+			System.out.println("Campeón" +": " + posicion.getText());
+			acumulador++;}
+		}
+	}
+	
 }

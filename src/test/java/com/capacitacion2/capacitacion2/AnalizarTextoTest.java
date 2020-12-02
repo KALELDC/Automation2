@@ -22,7 +22,6 @@ public class AnalizarTextoTest {
 		System.out.println("se ejecuto before(1)");
 		String oracion = "esta clase es de pruebas unitarias";
 		objAnalizarTexto = new AnalizarTexto(oracion);
-		
 		 
 	}
 	
