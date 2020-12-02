@@ -8,6 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import com.capacitacion2.capacitacion2.ProyectoFinal.AutomatizacionPaginaWeb;
 import com.capacitacion2.capacitacion2.clase4.ManagerDriver;
 import com.capacitacion2.capacitacion2.clase4.PageObjectoTourFrancia;
+import com.capacitacion2.capacitacion2.clase5Unitarias.AnalizarTexto;
 
 /**
  * Hello world!
@@ -26,6 +27,7 @@ public class App
         System.out.println( "Hi, I hope to do start my final project !" );
         System.out.println( "Selecciona la opción a automatizar : "
         		+ "\n- sophos"
+        		+ "\n- Unitaria"
         		+ "\n- tour \n" );
               
         seleccionarpagina= selec.nextLine();
@@ -61,7 +63,10 @@ public class App
        	espera (5);
        	 objTour.imprimirListaClicistas();
        	 objManager.cerrarNavegador();
-			break;	}
+			break;	
+			
+        
+        }
         
         }
         
