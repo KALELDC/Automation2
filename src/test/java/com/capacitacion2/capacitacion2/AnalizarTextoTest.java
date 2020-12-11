@@ -49,6 +49,14 @@ public void aftes () {
 	System.out.println("se ejecuto test after(1)");
 }
 
+public String getOracion() {
+	return oracion;
+}
+
+public void setOracion(String oracion) {
+	this.oracion = oracion;
+}
+
 
 	
 }

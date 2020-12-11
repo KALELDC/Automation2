@@ -38,4 +38,13 @@ public class MultiMetodo {
 		
 	}
 	
+	public void timeOut() {
+		try {
+			Thread.sleep(1000);	
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+	
+	}
+	
 }

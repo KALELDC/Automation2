@@ -18,7 +18,7 @@ public class ManagerDriver {
 	private void seleccionarNavegador() {
 		switch (nombreNavegador.toLowerCase().trim()) {
 		case "google" : 
-			System.setProperty("webdriver.chrome.driver", "src\\\\main\\\\java\\\\resources\\\\Drivers\\\\chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", "src\\main\\resources\\Drivers\\chromedriver.exe");
 			webDriver = new ChromeDriver();
 			break;
 		case "firefox" : 

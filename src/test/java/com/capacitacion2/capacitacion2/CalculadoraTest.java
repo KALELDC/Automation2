@@ -4,7 +4,7 @@ import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 import com.capacitacion2.capacitacion2.clase6assertion.Calculadora;
-import com.capacitacion2.capacitacion2.clase6assertion.MultiMetodo;
+
 
 public class CalculadoraTest {
 	Calculadora objCalcu;
