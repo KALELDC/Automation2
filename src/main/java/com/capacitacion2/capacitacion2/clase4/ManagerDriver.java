@@ -2,6 +2,10 @@ package com.capacitacion2.capacitacion2.clase4;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.GeckoDriverInfo;
+import org.openqa.selenium.firefox.GeckoDriverService;
 
 public class ManagerDriver {
 	private WebDriver webDriver;
@@ -20,10 +24,16 @@ public class ManagerDriver {
 		case "google" : 
 			System.setProperty("webdriver.chrome.driver", "src\\main\\resources\\Drivers\\chromedriver.exe");
 			webDriver = new ChromeDriver();
-			break;
+			break;	
 		case "firefox" : 
-			break;			
-		case "Internet Explorer" : 
+			System.setProperty("webdriver.gecko.driver", "src\\main\\resources\\Drivers\\geckodriver.exe");
+			
+			webDriver =  new FirefoxDriver();
+			break; 
+					
+		case "ie" : 
+           System.setProperty("webdriver.ie.driver", "src\\main\\resources\\Drivers\\IEDriverServer.exe");
+		 webDriver = new InternetExplorerDriver();
 			break;
 		default:
 			break;

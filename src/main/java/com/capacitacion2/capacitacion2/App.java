@@ -27,7 +27,6 @@ public class App
         System.out.println( "Hi, I hope to do start my final project !" );
         System.out.println( "Selecciona la opción a automatizar : "
         		+ "\n- sophos"
-        		+ "\n- Unitaria"
         		+ "\n- tour \n" );
               
         seleccionarpagina= selec.nextLine();
@@ -35,14 +34,17 @@ public class App
         switch (seleccionarpagina) {
 
         case "sophos" : 
-        	System.out.println( "Digita el navegador : google \n" );
+        	System.out.println( "Digita el navegador : \n"
+        			+ "- google \n"
+        			+"- ie \n" 
+        			+"- firefox \n");
           	 nombreNavegador = selec.nextLine();
         	urlPagina="https://www.sophossolutions.com";
        	    ManagerDriver objManager1 = new ManagerDriver(nombreNavegador, urlPagina);
        	 objManager1.navegarPagina();
         	 AutomatizacionPaginaWeb auto= new AutomatizacionPaginaWeb (objManager1.getWebDriver());
              auto.interactuarConSophos();
-             espera (5);
+             espera (10);
              System.out.println("viene lo dificil");
              auto.imprimircargo();
              objManager1.cerrarNavegador();
