@@ -21,7 +21,7 @@ public class TestPageObjectoTourFrancia {
 	public void before() {
 		System.out.println("se ejecuto before()");		
 
-		
+
 	   	urlPagina="https://www.marca.com/ciclismo/tour-francia/clasificacion.html";
 	  	    ManagerDriver objManager = new ManagerDriver("google", urlPagina);
 	  	 objManager.navegarPagina();
